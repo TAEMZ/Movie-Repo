@@ -1,7 +1,7 @@
 import React from "react";
 import MovieItem from "./MovieItem";
 
-function MovieList({ movies, onAddFavorite }) {
+export default function MovieList({ movies, onAddFavorite }) {
   return (
     <div className="movie-list">
       {movies.length > 0 ? (
