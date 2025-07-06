@@ -13,7 +13,7 @@ function App() {
   // Fetch movies from the API
   const fetchMovies = async (params) => {
     try {
-      const response = await axios.get("http://www.omdbapi.com/", {
+      const response = await axios.get("https://www.omdbapi.com/", {
         params: {
           apikey: "c11ff2ce",
           ...params,
@@ -22,7 +22,7 @@ function App() {
 
       const moviesWithDetails = await Promise.all(
         (response.data.Search || []).map(async (movie) => {
-          const details = await axios.get("http://www.omdbapi.com/", {
+          const details = await axios.get("https://www.omdbapi.com/", {
             params: {
               apikey: "c11ff2ce",
               i: movie.imdbID,
